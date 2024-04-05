@@ -18,7 +18,7 @@ public class GameManager
 
     public GameManager()
     {
-        gameField = new GameField();
+        gameField = new GameField(GameEngine.fieldSize);
 
         playerState = Field.X;
         aiState = Field.O;

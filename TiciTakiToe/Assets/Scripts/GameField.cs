@@ -1,3 +1,4 @@
+using Scripts.Models;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,23 +10,23 @@ namespace Scripts
 
     public class GameField
     {
-
         public int[] lastMove;
 
         public Cell[,] field;
 
-        public GameField()
+        public GameField(int fieldSize)
         {
-            field = new Cell[GameEngine.fieldSize, GameEngine.fieldSize];
+            field = new Cell[fieldSize, fieldSize];
 
-            for (int i = 0; i < GameEngine.fieldSize; i++)
+            for (int i = 0; i < fieldSize; i++)
             {
-                for (int y = 0; y < GameEngine.fieldSize; y++)
+                for (int y = 0; y < fieldSize; y++)
                 {
                     field[i, y] = new Cell();
                 }
             }
         }
+
     }
 
     public enum Field
